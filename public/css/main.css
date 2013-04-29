@@ -1,8 +1,362 @@
+@font-face{
+    font-family: AG Schoolbook; 
+    src: url('../fonts/AGSCHOOLBOOK-REGULAR.OTF');
+}
+
+@font-face{
+    font-family: Myriad Pro; 
+    src: url('../fonts/MYRIADPRO-REGULAR.OTF;');
+}
 
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+@font-face{
+    font-family: Arctic; 
+    src: url('../fonts/ARCTIC.TTF;');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100%
+
+}
+
+body, #navigation .current a:before{
+/* background-image:url('../imgs/cow.jpg');*/
+   background-image:url('../imgs/BG_img.jpg');
+
+}
+
+a{
+    text-decoration: none;
+}
+
+#header-wrap{
+    width: 100%;
+    bottom: 0px;
+    background-color: #383838;
+    box-shadow: 0px 10px 0px     margin: 0px auto 0px auto;;
+    -moz-box-shadow: 0px 10px 0px #7e9dc1;
+    -webkit-box-shadow: 0px 10px 0px #7e9dc1;
+
+}
+
+#header{
+    margin: 0 auto;
+    width: 940px;
+    height: 100px;
+}
+
+#container{
+    margin: auto;
+    width: 940px; 
+    min-height: 100%;
+    position:relative;
+    top: 20px;
+    margin-bottom: 20px;
+    background-image:url('../imgs/BG_img.jpg')
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto 2em;
+}
+
+#footer, .push {
+    height: 2em;
+}
+
+#footer p{
+    width: 100%;
+}
+
+
+#footer{
+    background-color: #7e9dc1;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-top: -2em;
+    text-align: center;
+    padding-top: 10px;
+    font-family: Myriad Pro; 
+    color: #383838;
+    clear:both;
+}
+
+#logo, #navigation{
+
+    margin-top: 20px;
+}
+
+#logo{
+    float: left;
+}
+
+#navigation{
+    width: 600px;
+    margin-top: 43px;
+    float: right;
+    font-size: 20px;
+    font-family: AG Schoolbook; 
+    color: #ffffff;
+}
+
+
+#navigation li{
+    display: inline;
+    margin: 0px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+}
+
+#navigation a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#navigation a:hover{
+    text-decoration: none;
+    color: #7e9dc1;
+}
+
+
+#navigation .current a{
+    position: relative;
+}
+
+
+/* #navigation .current a:before, #navigation .current a:after{
+    content:"";
+    display:block;
+    width: 2em; /* Let's call this our magic number... */
+    height: 2em; /* ...our notch will be half this size. We define it in ems to scale it up with the text size. */
+    position: absolute;
+    bottom: 0;
+    top: 63%;
+    left:50%;
+    margin-left:-1em; /* Half of our magic number. */
+}
+        
+
+#navigation .current a:after{
+    /*background-image:url('../imgs/tri.png');*/
+    width:0;
+    height:0;
+    border:1em solid; /* Half of our magic number. */
+    border-color:#7e9dc1 #7e9dc1 transparent #7e9dc1;
+}  */
+
+
+
+.divider{
+    font-size: 55px;
+    font-weight: 1;
+    font-family: times;
+}
+
+#column1, #column1_c1, #column2_c1{
+    float: left;
+}
+
+ #column2, #column1_c2, #column2_c2{
+    float: right;
+ }
+
+ #column1, #column2{
+    margin-top: 15px;
+    margin-bottom: 50px;
+    width: 430px;
+    border-top-style: solid;
+    border-top-width:4px;
+    border-top-color: #383838;
+    font-size: 20px;
+    font-family: AG Schoolbook; 
+    padding-top: 10px;
+    text-align: center; 
+ }
+
+ #column1_c1, #column1_c2, #column2_c1, #column2_c2{
+    margin-top: 10px;
+    font-size: 15px;
+    text-align: left;
+ }
+
+ h3{
+    text-transform: uppercase;
+    color: #5c317a;
+}
+
+
+#map_items{
+    position: absolute;;
+}
+
+ul#map_filter{
+
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-family: Myriad Pro;
+    list-style: none;
+    color: #7ac6ce; 
+    text-transform: uppercase;
+}
+
+ul#map_filter a{
+    color: #7ac6ce; 
+    font-size: 16px;
+}
+
+ul#map_filter li{
+    padding-bottom: 5px;
+/*    font-weight: bold;*/
+}
+
+ul#map_filter a:hover{
+    color: white;
+}
+
+
+ul#map_filter a.filter_selected{
+    color: white;
+}
+
+#slogan{
+    float: right;
+    margin-left: 490px;
+    margin-top: 5px;
+    font-family: Myriad Pro;
+    list-style: none;
+    color: #ced7e2; 
+    font-size: 25px;
+    text-align: right;
+    line-height: 20px !important;
+}
+
+#add_button{
+    margin-top: 300px;
+    margin-left: 10px;
+}
+
+.addButton{
+    display:block;
+    width: 201px;
+    height: 40px;
+    padding: 21px 0 0 0;
+    background: url('../imgs/button.png') top left no-repeat;
+    margin-bottom: 1em;
+    float: left;
+}
+
+.addButton:hover {
+    background-position: center left;
+}
+    
+.addButton:active {
+    background-position: bottom left;
+    padding-top: 22px;
+}
+
+label, .form_group{
+    color: white;
+}
+
+
+#create_itin_form{
+    width: 300px;
+    background: rgba(0, 0, 0, .4);
+    position: relative;;
+    margin-top: 30px;
+
+}
+
+#start_routing{
+
+}
+
+#create_part2{
+    display: none;
+}
+
+#addNewDestination{
+    color: white;
+}
+
+#browse_filter{
+    float: left;
+    width: 250px;
+    height: 600px;
+    background-color: green;
+}
+
+#browse_results{
+
+    float: right;
+    height: 100%;
+    width: 600px;
+    background-color: white;
+
+}
+
+
+#browse_results #add_button{
+    margin-left: 450px;
+}
+
+
+
+/*html{
+	background-image:url('greyTexture2.jpg') repeat-y repeat-x;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+
+
+height: 100%;
+margin: 0;
+padding: 0;
+
+
+    padding-top: 60px;
+    padding-bottom: 40px;
+
+}
+
+#nav li{
+    font-family: "ITC Avant Garde Gothic"; 
+    display: inline;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #333366;
+    font-size: 19px;
+    font-weight: bold;  
+}
+
+#nav li a:hover {
+    color: #ae5702;
+    font-size: 20px;
+}
+
+#nav li.active a{
+    text-decoration: underline;  
+}
+
+
+a{
+    text-decoration: none;
+    color: #333366;
+}
 
 
 
@@ -10,13 +364,4 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
+*/

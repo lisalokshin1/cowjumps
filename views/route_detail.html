@@ -1,0 +1,56 @@
+<script src="//cdnjs.cloudflare.com/ajax/libs/hogan.js/2.0.0/hogan.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script type="text/javascript" src="/js/route_detail_map.js"> </script>
+<style>
+
+#route_detail_mapCanvas{
+	height: 500px;
+	width: 500px;
+}
+
+
+</style>
+
+	<h2>{{itinerary_trip.route_name}} </h2>
+	<hr>
+
+	<div class = "tripRoute">
+		Trip Route Name:
+		{{itinerary_trip.route_name}}
+		<br>
+
+		Trip Duration:
+		{{itinerary_trip.days_stayed}}
+		<br>
+			
+		Region:
+		{{itinerary_trip.region}}
+		<br>
+
+		Budget:
+		{{itinerary_trip.budget}}
+		<br>
+
+		<hr>
+
+		Destination Points:
+		<br>
+		{{#itinerary_trip.destination_points}}
+		
+		<i>{{city_name}}</i><br>
+		- Long: <span id = "long">  {{geo_coordinates.longitude}}</span> <br> 
+		- Lat: <span id = "lat"> {{geo_coordinates.latitude}}</span> <br>
+
+
+		{{/itinerary_trip.destination_points}}
+
+		<br>
+
+
+		    <div id="map_container">
+		      <div id="map-canvas"></div>
+			<!-- <div id="mask"></div> -->
+		    </div>
+
+	</div>
+

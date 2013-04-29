@@ -1,0 +1,79 @@
+<script src="//cdnjs.cloudflare.com/ajax/libs/hogan.js/2.0.0/hogan.js"></script>
+
+<style>
+
+    /* IMPORTANT - fixes webkit infoWindow rendering */
+    #map-canvas img {
+/*      position: absolute;
+      top: 70px;
+      left: 85px;
+      height: 445px;
+      width: 845px;
+      z-order: -1000;*/
+    }
+</style>
+
+
+    <h3>{{page_title}}</h3>
+
+    <div onload="initialize()" id="map_container">
+      <div id="map-canvas"></div>
+      <div id="mask"></div>
+    </div>
+
+
+    <form id="create_itin_form" method="POST" action="/add_route">
+      <input type="hidden" id="finalDestinationData" name="destinations_json">
+
+      <div id = "create_part1"> 
+        <label for="route_name">
+          {{#errors.route_name}}
+          <span class="help-block alert alert-error">{{type}}</span>
+          {{/errors.route_name}}
+
+          Name Your Trip Route <input type="text" name="route_name" class="required" id="thenamebox" value="{{itinerary.route_name}}" required>          
+        </label>            
+      
+        <label for="duration">
+          {{#errors.duration}}
+          <span class="help-block alert alert-error">{{type}}</span>
+          {{/errors.duration}}
+
+          How long was your trip?  <input type="text" name="duration" id="duration" value="{{itinerary.duration}}"> 
+        </label>
+                    
+        <label for="budget">
+          {{#errors.budget}}
+          <span class="help-block alert alert-error">{{type}}</span>
+          {{/errors.budget}}
+
+          Approximate Trip Budget: <input type="text" name="budget" id="budget" value="{{itinerary.budget}}"> 
+        </label>
+
+        <button type="button" id = "start_routing" onclick="hide_Part1()"> Start Routing!</button>
+
+      </div>
+
+      <div id = "create_part2"> 
+
+        <label class="control-label">Starting Point</label>
+        <div class="controls">
+          <input id="location"  name="location" type="text" placeholder="Enter a city or place" class=" destinationTextbox" required="">
+        </div>
+
+      <div id="addDest"></div>     
+      
+      <hr> 
+      
+      <input type="button" id="nextBtn" value="Add">  |     
+      <input type="submit" value="Save Route">
+
+    </div> 
+    
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"> </script>
+<script type="text/javascript" src="/js/add_route_AddDest.js"> </script>
+<script type="text/javascript" src="/js/add_route_mapGeo.js"> </script>
+<script type="text/javascript" src="/js/add_route_Hide.js"> </script>
+
+    

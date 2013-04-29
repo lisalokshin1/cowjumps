@@ -1,0 +1,30 @@
+
+#map_container {
+	width: 1000px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#map-canvas, #route_detail_mapCanvas {
+	position: absolute;
+	top: 70px;
+	left: 85px;
+	height: 445px;
+	width: 845px;
+	  z-order: -1000;
+}
+
+
+
+
+#mask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 586px;
+	width: 1000px;
+	background: url('mask.png') no-repeat;
+	background-size: 100%;
+	pointer-events:none;
+}

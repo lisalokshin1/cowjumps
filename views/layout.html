@@ -1,49 +1,67 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html>
     <head>
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{pageTitle}}</title>
+        <title>cowJumps: {{pageTitle}}</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="/css/bootstrap.min.css">
-        <style>
-            body {
-                padding-top: 60px;
-                padding-bottom: 40px;
-            }
-        </style>
-        <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
-        <link rel="stylesheet" href="/css/main.css">
 
+
+        <link rel="stylesheet" type="text/css" href="../css/main.css" />
+        <link rel="stylesheet" type="text/css" href="../css/map.css" />
+      <!--   <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/bootstrap-responsive.min.css"> 
+ -->
         <script src="/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    </head>
-    <body>
-
-        <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
-
-        <div class="container">
-
-            {{{yield}}}
-
-        </div> <!-- /container -->
-
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+    </head>
+
+    <body>
+        <div class = "wrapper"> 
+            <div id="header-wrap">
+                <div id="header">
+                    <div id = "logo">
+                        <img src = "../imgs/logo.png" alt = "cowjumps"/>
+                    </div> 
+                    <ul id = "navigation">
+
+                        <li class= "current"><a href="/home"> home</a> </li> <span class = "divider">|</span>
+                        <li><a href="/add_route"> add route</a> </li> <span class = "divider">|</span>
+                        <li><a href="/browse"> browse routes</a> </li> <span class = "divider">|</span>
+                        <li><a href = "#"> about</a> </li> 
+                    </ul>   
+                </div>
+            </div>
+
+            <div style="clear: both;"></div>
+            
+            <div id = "container">
+
+                {{{yield}}}
+
+            </div> 
+
+            <div class="push"></div>
+        </div>
+
+<!--         <div id="footer">
+            <p><em>cowjumps &copy 2013.</em> &nbsp; &nbsp; &nbsp; "Not all those who wander are lost"</p>
+
+        </div> -->
 
         <script src="/js/vendor/bootstrap.min.js"></script>
-
-        <script src="/js/main.js"></script>
-
         <script src="/js/jquery.validate.min.js"></script>
 
-        <script>
-            // when the page is loaded...
+         <script>
+         // when the page is loaded...
             jQuery(document).ready( function() {
-                jQuery('form').validate(); // turn on validation for all forms
+            jQuery('form').validate(); // turn on validation for all forms
             });
         </script>
-
+        
     </body>
-</html>
+</html> 

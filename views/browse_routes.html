@@ -1,0 +1,19 @@
+<h3>{{pageTitle}}</h3>
+
+<div id = "browse_filter"> 
+Filter
+</div> 
+
+<div id = "browse_results"> 
+	<p> 
+		<!-- destinations loop -->
+		{{#itineraries}}
+			<li><a href="/itineraries/{{slug}}">{{route_name}}</a> {{source.route_name}}</li>
+		{{/itineraries}}
+	</p> 
+
+	<p id = "add_button"> 
+		<a href = "/add_route" class="addButton"> </a>
+	</p>
+
+</div> 
